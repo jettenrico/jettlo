@@ -9,11 +9,23 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { PageStudentListComponent } from './pages/page-student-list/page-student-list.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PageJettloComponent } from './pages/page-jettlo/page-jettlo.component';
+import { CardPlanComponent } from './pages/components/card-plan/card-plan.component';
+import { CardTodoComponent } from './pages/components/card-todo/card-todo.component';
+import { CardDoneComponent } from './pages/components/card-done/card-done.component';
+import { JettloNavbarComponent } from './pages/components/jettlo-navbar/jettlo-navbar.component';
+import { ToastersComponent } from './toaster/toasters/toasters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageStudentListComponent
+    PageStudentListComponent,
+    PageJettloComponent,
+    CardPlanComponent,
+    CardTodoComponent,
+    CardDoneComponent,
+    JettloNavbarComponent,
+    ToastersComponent
   ],
   imports: [
     BrowserModule,

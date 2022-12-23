@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-header">Todo</div>
+    <div class="card-body">
+        <div *ngFor="let t of jettlos" class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{t.title}}</h5>
+                <p class="card-content">{{t.description}}</p>
+                <div class="d-flex flex-row-reverse">
+                    <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+                        <button
+                            type="button"
+                            class="btn btn-outline-success"
+                            id="dropdownManual"
+                            ngbDropdownAnchor
+                            (focus)="myDrop.open()"
+                        >
+                        Action...
+                        </button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownManual">
+                            <button (click)="t.status = statusPlan; onUpdate(t.id, t)" ngbDropdownItem>Plan</button>
+                            <button (click)="t.status = statusDone; onUpdate(t.id, t)" ngbDropdownItem>Done</button>
+                            <button (click)="onRemove(t.id)" ngbDropdownItem>Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
