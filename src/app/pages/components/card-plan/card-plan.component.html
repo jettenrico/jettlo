@@ -3,10 +3,10 @@
     <div class="card-body">
         <div *ngFor="let t of jettlos" class="card mb-3">
             <div class="card-body">
-                <h5 class="card-title">{{t.title}}</h5>
-                <p class="card-content">{{t.description}}</p>
-                <!-- <input type="text" class="form-control mb-3" [(ngModel)]="t.title" (blur)="onUpdate(t.id, t)" placeholder="Enter Task Title" style="font-weight: bold;">
-                <textarea name="" id="" cols="42" rows="3" class="textarea mb-3 ms-2 me-2" [(ngModel)]="t.description" (blur)="onUpdate(t.id, t)" placeholder="Enter Task Description" ></textarea> -->
+                <!-- <h5 class="card-title">{{t.title}}</h5>
+                <p class="card-content">{{t.description}}</p> -->
+                <input type="text" class="form-control mb-2" [(ngModel)]="t.title" (blur)="onUpdate(t.id, t)" placeholder="Enter Task Title" style="font-weight: bold;">
+                <textarea maxlength="115" name="" id="" cols="42" rows="3" class="textarea mb-3 ms-2 me-2" [(ngModel)]="t.description" (blur)="onUpdate(t.id, t)" placeholder="Enter Task Description" ></textarea>
                 <div class="d-flex flex-row-reverse">
                     <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
                         <button

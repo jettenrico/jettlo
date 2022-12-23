@@ -14,7 +14,7 @@ export class CardPlanComponent implements OnInit {
   statusDone:string = "Done";
   showToast:boolean = false;
 
-  constructor(private jettloService: JettloService, private toaster: ToasterService){}
+  constructor(private jettloService: JettloService, private toasterService: ToasterService){}
 
   ngOnInit(): void {
     this.onAll();
@@ -37,13 +37,13 @@ export class CardPlanComponent implements OnInit {
 
   onUpdate(id:string, jettlo: IJettlo){
     this.jettloService.update(id, jettlo);
-    this.toaster.showToast = true;
-    this.toaster.message = "TEST";
+    this.toasterService.showToast = true;
+    this.toasterService.message = "Data Berhasil Diubah!";
   }
 
   onRemove(id:string){
     this.jettloService.delete(id);
-    this.toaster.showToast = true;
-    this.toaster.message = "TEST";
+    this.toasterService.showToast = true;
+    this.toasterService.message = `Task Berhasil Dihapus!`;
   }
 }
